@@ -2,42 +2,34 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+#SingleInstance, Force ; Ensures a single instance of the script running at one time
 
+
+; ahk_class Qt5152QWindowIcon
+; ahk_exe texmaker.exe
 
 Menu, Tray, Icon, Icons/tex-symbol-blue.png
 #IfWinActive, ahk_exe texmaker.exe
 
 ; Paste a picture with defined filename, caption and label
 ::rysc::
-InputBox, pic_filename, Figure - center - filename, Podaj nazwę pliku:
-InputBox, pic_caption, Figure - center - caption, Wpisz podpis rysunku:
-InputBox, pic_label, Figure - center - label, Podaj etykietę:
-part1 =
+InputBox, figure_filename, Figure - center - filename, Podaj nazwę pliku:
+InputBox, figure_caption, Figure - center - caption, Wpisz podpis rysunku:
+InputBox, figure_label, Figure - center - label, Podaj etykietę:
+text_to_paste =
 (
 \begin{figure}[htp]
 \begin{center}
-\includegraphics[width=0.9\textwidth]{
-)
-part2 =
-(
-}
+\includegraphics[width=0.9\textwidth]{%figure_filename%}
 \end{center}
-\caption{
-)
-part3 =
-(
-}
-\label{rys:
-)
-part4 =
-(
-}
+\caption{%figure_caption%}
+\label{rys:%figure_label%}
 \end{figure}
 )
-full_string = %part1%%pic_filename%%part2%%pic_caption%%part3%%pic_label%%part4%
-Clipboard := full_string
-Send, ^v
+PasteText(text_to_paste)
 return
+
+
 
 ::1rysc::
 MsgBox, 1rysc_works
@@ -63,8 +55,7 @@ text_to_paste =
 \end{center}
 \end{table}
 )
-Clipboard := text_to_paste
-Send, ^v
+PasteText(text_to_paste)
 return
 
 ::rysquad::
@@ -103,7 +94,7 @@ text_to_paste =
 \end{minipage}
 \begin{minipage}[b]{0.5\textwidth}
 \begin{center}
-\includegraphics[width=\textwidth]{profile/l2c}
+\includegraphics[width=\textwidth]{profile/}
 \end{center}
 \caption{Przekrój profilu \emph{}}
 \label{rys:profil}
@@ -111,8 +102,16 @@ text_to_paste =
 
 \end{figure}
 )
-Clipboard := text_to_paste
-Send, ^v
+PasteText(text_to_paste)
 return
 
 
+PasteText(text_to_paste){
+    Clipboard := text_to_paste
+    if WinActive("ahk_exe texmaker.exe")
+        Send, ^v
+    else{
+        WinActivate ahk_exe texmaker.exe  
+        Send, ^v
+    }
+}

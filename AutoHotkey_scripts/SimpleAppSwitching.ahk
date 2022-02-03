@@ -2,6 +2,7 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+#SingleInstance, Force ; Ensures a single instance of the script running at one time
 
 ; for HwndWrapper[DefaultDomain;;ffa5699b-fdee-485a-bb85-7ee53438c266]
 ; and HwndWrapper[OneCommander.exe;;bcd2d438-5355-4498-9ef2-8ca9bf8624e6]

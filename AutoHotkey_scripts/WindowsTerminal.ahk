@@ -2,8 +2,9 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+#SingleInstance, Force ; Ensures a single instance of the script running at one time
 
-; Use Window Spy to get WinTitle, ahk_exe, ahk_class and other
+; Use Window Spy (indcluded with ahk) to get WinTitle, ahk_exe, ahk_class and other
 
 Menu, Tray, Icon, Icons/wt_logo.png
 #IfWinActive, ahk_exe WindowsTerminal.exe
@@ -11,15 +12,15 @@ Menu, Tray, Icon, Icons/wt_logo.png
 ; --------- Inne skrypty ---------
 
 ::ahktex::
-Send, C:\Users\kamil\Documents\GitHub\MyConfigFiles\AutoHotkey_scripts\TeXMaker.ahk
+Send, C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\TeXMaker.ahk
 return
 
 ::ahkgid::
-Send, C:\Users\kamil\Documents\GitHub\MyConfigFiles\AutoHotkey_scripts\Construction.ahk
+Send, C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Construction.ahk
 return
 
 ::ahkdia::
-Send, C:\Users\kamil\Documents\GitHub\MyConfigFiles\AutoHotkey_scripts\Diamond.ahk
+Send, C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Diamond.ahk
 return
 
 ; --------- Aktualne ---------
@@ -39,7 +40,7 @@ Send, C:\Users\kamil\Documents\GitHub\
 return
 
 ::ahks::
-Send, C:\Users\kamil\Documents\GitHub\MyConfigFiles\AutoHotkey_scripts\
+Send, C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\
 return
 
 ::fireeng::

@@ -2,12 +2,13 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+#SingleInstance, Force ; Ensures a single instance of the script running at one time
 
 ;#IfWinActive, ahk_exe gid.exe
 
 SetKeyDelay, 50, 50
 
-;A script for automating areas creation in GiD
+;A script for automating areas creation in GiD (IGES files)
 
 ;Button positions (active window):
 
