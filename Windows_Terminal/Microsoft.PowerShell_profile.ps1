@@ -1,1 +1,1 @@
-oh-my-posh --init --shell pwsh --config C:\Users\kamil\Documents\GitHub\MyConfigFiles\Windows_Terminal\mytheme.omp.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config C:\Users\kamil\Documents\GitHub\LittleHelpers\Windows_Terminal\mytheme.omp.json | Invoke-Expression
