@@ -10,7 +10,19 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 Menu, Tray, Icon, Icons/switch.png
 
+;________________________HOTKEY ASSIGNMENT____________________________
+
 F12::Suspend
+
+F13::switch_to_gid()
+F14::switch_to_onecommander()
+F15::swtich_to_foxit()
+F16::switch_to_libreoffice()
+F17::switch_to_notepadplusplus()
+F18::back()
+
+switch_to_firefox()
+switch_to_diamond()
 
 ;********************* Current window management START *********************
 
@@ -40,95 +52,97 @@ back(){
 ;tooltip, baaaack
 if WinActive("ahk_exe firefox.exe")
 	Send ^+{tab}
+if WinActive("ahk_exe OneCommander.exe")
+    Send, ^+{Tab}
+if WinActive("ahk_class classFoxitReader")
+    Send, ^+{Tab}
 if WinActive("ahk_class Chrome_WidgetWin_1")
 	Send ^+{tab}
 if WinActive("ahk_class Notepad++")
-	Send ^+{tab}
+	Send ^{PgUp}
 if WinActive("ahk_exe explorer.exe")
 	Send !{left} ;alt left is the explorer shortcut to go "back" or "down" one folder level.
 }
 
-; 1
-; Firefox
-; ahk_class MozillaWindowClass
+; Firefox 
+; ahk_class MozillaWindowClass 
 ; ahk_exe firefox.exe
-F3::   
+switch_to_firefox(){
 IfWinNotExist, ahk_class MozillaWindowClass
     Run, C:\Program Files\Mozilla Firefox\firefox.exe
 if WinActive("ahk_class MozillaWindowClass")
     Send, ^{Tab}
 else
     WinActivate ahk_class MozillaWindowClass
-return
+}
 
 
-; 2
-; GiD
-; ahk_class TkTopLevel
+; GiD 
+; ahk_class TkTopLevel 
 ; ahk_exe gid.exe
-F4::
+switch_to_gid(){
 IfWinNotExist, ahk_class TkTopLevel
     Run, C:\Program Files\GiD\GiD 15.0.2\gid.exe
 WinActivate ahk_class TkTopLevel
-return
+}
 
-; 3
-; Diamond
-; ahk_class HwndWrapper[DefaultDomain;;ffa5699b-fdee-485a-bb85-7ee53438c266]
+; Diamond 
+; ahk_class HwndWrapper[DefaultDomain;;ffa5699b-fdee-485a-bb85-7ee53438c266] 
 ; ahk_exe Diamond.exe
-F5::
+switch_to_diamond(){
 IfWinNotExist, ahk_exe Diamond.exe
     Run, C:\Users\kamil\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Diamond\Diamond 2016.appref-ms
 WinActivate ahk_exe Diamond.exe
-return
+}
 
-; 4
-; Notepad++
-; ahk_class Notepad++
+; Notepad++ 
+; ahk_class Notepad++ 
 ; ahk_exe notepad++.exe
-F11::
+switch_to_notepadplusplus(){
 IfWinNotExist, ahk_class Notepad++
     Run, C:\Program Files\Notepad++\notepad++.exe
 if WinActive("ahk_class Notepad++")
     Send, ^{PgDn}
 else
     WinActivate ahk_class Notepad++
-return
+}
 
-; 5
 ; LibreOffice Calc
 ; Those work for all LibreOffice apps
 ; ahk_class SALFRAME
 ; ahk_exe soffice.bin
-F6::
+switch_to_libreoffice(){
 IfWinNotExist, ahk_class SALFRAME
     Run, "C:\Program Files\LibreOffice\program\scalc.exe"
+GroupAdd, libreoffice_window_group, ahk_class SALFRAME
+if WinActive("ahk_class ahk_class SALFRAME")
+    GroupActivate, libreoffice_window_group, r
 WinActivate ahk_class SALFRAME
-return
+}
 
 
-; 6
-; Foxit PDF Reader
+; Foxit PDF Reader 
 ; ahk_class classFoxitReader
 ; ahk_exe FoxitPDFReader.exe
-F3::   
+swtich_to_foxit(){
 IfWinNotExist, ahk_class classFoxitReader
     Run, "C:\Program Files (x86)\Foxit Software\Foxit PDF Reader\FoxitPDFReader.exe"
 if WinActive("ahk_class classFoxitReader")
     Send, ^{Tab}
 else
     WinActivate ahk_class classFoxitReader
-return
+}
 
-; 7
 ; OneCommader
 ; ahk_class HwndWrapper[OneCommander.exe;;bcd2d438-5355-4498-9ef2-8ca9bf8624e6]
 ; ahk_exe OneCommander.exe
-F7::
+switch_to_onecommander(){
 IfWinNotExist, ahk_exe OneCommander.exe
     Run, C:\Program Files\WindowsApps\44576milosp.OneCommander_3.4.17.0_neutral__p0rg76fmnrgsm\Rapidrive\OneCommander.exe
+if WinActive("ahk_exe OneCommander.exe")
+    Send, ^{Tab}
 WinActivate ahk_exe OneCommander.exe
-return
+}
 
 ; 8
 ; Explorer

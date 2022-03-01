@@ -9,79 +9,39 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Menu, Tray, Icon, Icons/wt_logo.png
 #IfWinActive, ahk_exe WindowsTerminal.exe
 
-; --------- Inne skrypty ---------
-
-::ahktex::
-Send, C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\TeXMaker.ahk
-return
-
-::ahkgid::
-Send, C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Construction.ahk
-return
-
-::ahkdia::
-Send, C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Diamond.ahk
-return
-
 ; --------- Aktualne ---------
 
-::urania::
-Send, 'D:\Wszystko\Projekty_CR\OneDrive\CONSULTRISK\52_Hala_Urania - General\02_model\'
-return
+::otto::'D:\Wszystko\Projekty_CR\OneDrive\CONSULTRISK\OTTO_Konin_Zaganski - Dokumenty\konstrukcja'
+::ottol::D:\Wszystko\Projekty_CR\21_007_OTTO_Konin_Zaganski
 
-::uranial::
-Send, D:\Wszystko\Projekty_CR\21_006_52_Hala_Urania\
-return
+::urania::'D:\Wszystko\Projekty_CR\OneDrive\CONSULTRISK\52_Hala_Urania - General\02_model\'
+::uranial::D:\Wszystko\Projekty_CR\21_006_52_Hala_Urania\
 
-; --------- GitHub ---------
+; --------- Inne skrypty ---------
 
-::github::
-Send, C:\Users\kamil\Documents\GitHub\
-return
+::ahktex::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\TeXMaker.ahk
+::ahkgid::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Construction.ahk
+::ahkdia::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Diamond.ahk
 
-::ahks::
-Send, C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\
-return
+; --------- GitHub Folder ---------
 
-::fireeng::
-Send, C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\
-return
-
-::mcsteel::
-Send, C:\Users\kamil\Documents\GitHub\mcsteel\
-return
-
-::fdsafir2::
-Send, C:\Users\kamil\Documents\GitHub\mcsteel\fdsafir2.py
-return
+::github::C:\Users\kamil\Documents\GitHub\
+::ahks::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\
+::fireeng::C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\
+::mcsteel::C:\Users\kamil\Documents\GitHub\mcsteel\
+::iso2nf::C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\iso2nf.py
 
 ; --------- Programy ---------
-;VS code: code
 
-::safirexe::
-Send, C:\SAFIR\safir.exe
-return
+::safirexe::C:\SAFIR\safir.exe
 
 ; --------- DYSK C ---------
 
-::desk::
-Send, C:\Users\kamil\Desktop\
-return
-
-::autostart::
-Send, 'C:\Users\kamil\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'
-return
+::desk::C:\Users\kamil\Desktop\
+::autostart::'C:\Users\kamil\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'
 
 ; --------- DYSK D ---------
 
-::cr::
-Send, D:\Wszystko\Projekty_CR\OneDrive\CONSULTRISK\
-return
+::cr::D:\Wszystko\Projekty_CR\OneDrive\CONSULTRISK\
 
-::crl::
-Send, D:\Wszystko\Projekty_CR\
-return
-
-::wszystko::
-Send, D:\Wszystko\
-return
+::crl::D:\Wszystko\Projekty_CR\

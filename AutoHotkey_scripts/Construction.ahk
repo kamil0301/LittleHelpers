@@ -8,7 +8,7 @@ counter = 1 ;For the Counter
 
 
 ;********************* Copy and pasting START *********************
-;UNUSED
+;------UNUSED
 ;All of them are defined in Logitech Gaming Software currently
 
 ;Copy all
@@ -95,3 +95,17 @@ ToolTip
 return
 
 ;********************* Counter END *********************
+;********************* Active in GiD START *********************
+#IfWinActive, ahk_class TkTopLevel
+
+:*?:,::.
+
+
+;********************* Active in GiD END *********************
+;********************* Active in AutoCAD START *********************
+#IfWinActive, ahk_exe acad.exe
+
+:*?:,::.
+
+
+;********************* Active in AutoCAD END *********************
