@@ -118,6 +118,12 @@
 					"PackageIdentifier" : "Bitwarden.Bitwarden"
 				},
 				{
+					"PackageIdentifier" : "Yubico.YubikeyManager"
+				},
+				{
+					"PackageIdentifier" : "Yubico.Authenticator"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.WindowsTerminal"
 				},
 				{
