@@ -61,7 +61,6 @@ nodes_charts(chart_names, chart_type)
     KeyWait, Space
     MouseGetPos, scale_chart_x, scale_chart_y
     ; reload first chart
-    MsgBox, %chart_type%
     if (chart_type = "nodes")
     {
         Send, {ShiftDown}{Tab 2}{ShiftUp}{Enter}
