@@ -20,6 +20,7 @@ Loop % nodes.MaxIndex(){
     Send, % nodes[A_Index]
     Send, {Tab}{Enter}{ShiftDown}{Tab}{ShiftUp}
 }
+Send, {ShiftDown}{Tab 4}{ShiftUp}{Enter}
 return
 
 ; Generate displacement charts
@@ -46,20 +47,27 @@ nodes_charts(chart_names, chart_type)
     WinGetTitle, diamond_window_title
     ; MsgBox, Nazwa okna: %diamond_window_title%
     ; get the coordinates for scaling x axis of the chart
-    MsgBox, 33, Opcje skalowania, Ustaw kursor myszy w miejscu`, gdziema być ustawiony `nkursor myszy do przeskalowania wykresów`,`nczyli w okolicy początu skali osi czasu.`nNastępnie naciśnij SPACJĘ i poczekaj.`n`n(Aby legenda była dobrze widoczna), 10
+    MsgBox, 33, Opcje skalowania, Ustaw kursor myszy w miejscu`, gdzie ma być ustawiony `nkursor myszy do przeskalowania wykresów`,`nczyli w okolicy początu skali osi czasu.`nNastępnie naciśnij SPACJĘ i poczekaj.`n`n(Aby legenda była dobrze widoczna), 30
     IfMsgBox, Cancel
     {
-        MsgBox, 16, Opcje skalowania, Generowanie wykresów anulowane., 10
+        MsgBox, 16, Opcje skalowania, Generowanie wykresów anulowane., 5
         return
     }
     IfMsgBox, Timeout
     {
-        MsgBox, 16, Opcje skalowania, Czas na odpowiedź minął...`nGenerowanie wykresów anulowane., 10
+        MsgBox, 16, Opcje skalowania, Czas na odpowiedź minął...`nGenerowanie wykresów anulowane., 7
         return
     }
-    KeyWait, Space, D
+    KeyWait, Space, D T20
+    if ErrorLevel
+    {
+        MsgBox, 16, Opcje skalowania, Czas na wybranie miejsca minął...`nGenerowanie wykresów anulowane., 7
+        return
+    }
     KeyWait, Space
     MouseGetPos, scale_chart_x, scale_chart_y
+    if !WinActive(diamond_window_title)
+        Winactivate, %diamond_window_title%
     ; reload first chart
     if (chart_type = "nodes")
     {
@@ -81,7 +89,7 @@ nodes_charts(chart_names, chart_type)
     }
     else
     {
-        MsgBox, 16, Błąd wywołania, Zły typ wykresów (błąd w kodzie).`nGenerowanie wykresów anulowane., 10
+        MsgBox, 16, Błąd wywołania, Zły typ wykresów (błąd w kodzie).`nGenerowanie wykresów anulowane., 5
         return
     }
     Sleep, 3000
@@ -97,24 +105,21 @@ nodes_charts(chart_names, chart_type)
     {
         Send, {ShiftDown}{Tab 6}{ShiftUp}{Enter}
     }
+    WinWaitActive, Zapisywanie jako
+    Sleep, 500
     Send, % chart_names[1]
-    Sleep, 2000
+    Sleep, 500
     ; Zapytaj czy wybrano prawidłowy folder
     WinWaitActive, %diamond_window_title%
-    MsgBox, 35, Opcje zapisu, Czy zapisałeś pierwszy wykres`nwe właściwym miejscu?`n`nJeżeli wykresy już istnieją w wybranym folderze`nto zostaną one nadpisane!, 30
+    MsgBox, 36, Opcje zapisu, Czy zapisałeś pierwszy wykres`nwe właściwym miejscu?`n`nJeżeli wykresy już istnieją w wybranym folderze`nto zostaną one nadpisane!, 30
     IfMsgBox, No
     {
-        MsgBox, 16, Opcje zapisu, Nie wybrano prawidłowego miejsca zapisu.`nGenerowanie wykresów anulowane., 10
-        return
-    }
-    IfMsgBox, Cancel
-    {
-        MsgBox, 16, Opcje zapisu, Generowanie wykresów anulowane., 10
+        MsgBox, 16, Opcje zapisu, Generowanie wykresów anulowane., 5
         return
     }
     IfMsgBox, Timeout
     {
-        MsgBox, 16, Opcje zapisu, Czas na odpowiedź minął...`nGenerowanie wykresów anulowane., 10
+        MsgBox, 16, Opcje zapisu, Czas na odpowiedź minął...`nGenerowanie wykresów anulowane., 5
         return
     }
     ; Pętla zapisująca pozostałe wykresy
@@ -145,13 +150,14 @@ nodes_charts(chart_names, chart_type)
             Send, {ShiftDown}{Tab 6}{ShiftUp}{Enter}
         }
         WinWaitActive, Zapisywanie jako
-        Sleep, 2000
+        Sleep, 500
         Send, % chart_names[A_Index+1]
         Send, {Enter}
-        Sleep, 400
+        Sleep, 500
         If WinActive("Zapisywanie jako", "już istnieje")
             Send, t
     }
+    MsgBox, 64, Generowanie wykresów, Generowanie wykresów zakończone, 5
 }
 
 
