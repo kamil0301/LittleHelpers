@@ -24,48 +24,34 @@ Menu, Tray, Icon, Icons/tex-symbol-blue.png
 ; S - side, F - front, T - top, 100 - czas (sekundy)
 
 ::allcharts::
-InputBox, folder_name, Dane do wykresów, Podaj nazwę folderu z wykresami:
-if ErrorLevel
-{
+Gui, Font, s10
+Gui Add, Text, xm section, Nazwa folderu z wykresami
+Gui Add, Edit, ys x200 W200 vfolder_name, scenariusz
+Gui Add, Text, xm section, Scenariusz (np. "1a")
+Gui Add, Edit, ys x200 W200 vnr_scenariusza
+Gui Add, Text, xm section, Skala rysunkow
+Gui Add, Edit, ys x200 W200 vskala_rys
+Gui Add, Text, xm section, Wpisz czas dla kolejnych zestawow rysunkow (np."100"):
+Gui Add, Text, xm section, 1 zestaw rysunkow
+Gui Add, Edit, ys x200 W200 vczas_1
+Gui Add, Text, xm section, 2 zestaw rysunkow
+Gui Add, Edit, ys x200 W200 vczas_2
+Gui Add, Text, xm section, 3 zestaw rysunkow
+Gui Add, Edit, ys x200 W200 vczas_3
+Gui Add, Text, xm section, 4 zestaw rysunkow
+Gui Add, Edit, ys x200 W200 vczas_4
+Gui Add, Button, x200 w80 section Default, OK
+Gui Add, Button, ys w80 gExit, Cancel
+Gui, Show,, Dane do wykresow
+return
+
+GuiClose:
+Exit:
+    Gui, Destroy
     MsgBox, 16, Dane do wykresów, Anulowano wprowadzanie wykresów, 7
     return
-}
-InputBox, nr_scenariusza, Dane do wykresów, Wpisz numer/identyfikator scenariusza (np: "1a"):
-if ErrorLevel
-{
-    MsgBox, 16, Dane do wykresów, Anulowano wprowadzanie wykresów, 7
-    return
-}
-InputBox, skala_rys, Dane do wykresów, Wpisz skalę rysunków (np. "3"):
-if ErrorLevel
-{
-    MsgBox, 16, Dane do wykresów, Anulowano wprowadzanie wykresów, 7
-    return
-}
-InputBox, czas_1, Dane do wykresów, Wpisz czas dla pierwszego zestawu rysunków (np."100"):
-if ErrorLevel
-{
-    MsgBox, 16, Dane do wykresów, Anulowano wprowadzanie wykresów, 7
-    return
-}
-InputBox, czas_2, Dane do wykresów, Wpisz czas dla drugiego zestawu rysunków (np."200"):
-if ErrorLevel
-{
-    MsgBox, 16, Dane do wykresów, Anulowano wprowadzanie wykresów, 7
-    return
-}
-InputBox, czas_3, Dane do wykresów, Wpisz czas dla trzeciego zestawu rysunków (np."300"):
-if ErrorLevel
-{
-    MsgBox, 16, Dane do wykresów, Anulowano wprowadzanie wykresów, 7
-    return
-}
-InputBox, czas_4, Dane do wykresów, Wpisz czas dla czwartego zestawu rysunków (np."400"):
-if ErrorLevel
-{
-    MsgBox, 16, Dane do wykresów, Anulowano wprowadzanie wykresów, 7
-    return
-}
+ButtonOK:
+Gui Submit
 text_to_paste = 
 (
 \begin{figure}[h!]
