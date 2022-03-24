@@ -29,7 +29,7 @@ Menu, Tray, Icon, Icons/wt_logo.png
 ::ahks::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\
 ::fireeng::C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\
 ::mcsteel::C:\Users\kamil\Documents\GitHub\mcsteel\
-::iso2nf::C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\iso2nf.py
+::iso2nf::python C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\iso2nf.py -s C:\SAFIR\safir.exe -c .\config\ -r 
 
 ; --------- Programy ---------
 
