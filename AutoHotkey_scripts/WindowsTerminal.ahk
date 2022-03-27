@@ -22,6 +22,7 @@ Menu, Tray, Icon, Icons/wt_logo.png
 ::ahktex::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\TeXMaker.ahk
 ::ahkgid::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Construction.ahk
 ::ahkdia::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Diamond.ahk
+::ahkswitch::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\SimpleAppSwitching.ahk
 
 ; --------- GitHub Folder ---------
 
@@ -45,3 +46,10 @@ Menu, Tray, Icon, Icons/wt_logo.png
 ::cr::D:\Wszystko\Projekty_CR\OneDrive\CONSULTRISK\
 
 ::crl::D:\Wszystko\Projekty_CR\
+
+
+#IfWinActive, ahk_exe PowerToys.PowerLauncher.exe
+::ahktex::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\TeXMaker.ahk
+::ahkgid::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Construction.ahk
+::ahkdia::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Diamond.ahk
+::ahkswitch::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\SimpleAppSwitching.ahk
