@@ -171,15 +171,15 @@ Gui, dv:Default ;gui creation
 Gui, Font, s10
 Gui Add, Text, xm section, Rodzaj generowanych rysunkow
 Gui Add, DropDownList, ys x230 W200 vgeneration_type, Narzedzie Wycinanie||Zapis w Diamond
-Gui Add, Text, xm section, Przy użyciu Narzedzia Wycinanie zaznacz obszar pierwszego rysunku
+Gui Add, Text, xm section, Przy użyciu Narzedzia Wycinanie poczekaj i zaznacz obszar pierwszego rysunku
 Gui Add, Text, xm section, Folder do zapisu rysunków: 
-Gui Add, Edit, xm section W350 voutput_dir, C:\Users\kamil\Pictures\testy diamond ahk
+Gui Add, Edit, xm section W350 voutput_dir
 Gui Add, Button, ys gdvButtonPrzegladaj, Przegladaj
 Gui Add, Text, xm section, Typ rysunkow (Front/Side/Top)
 Gui Add, DropDownList, ys x230 W80 vtype, F|S|T
 Gui Add, Text, xm section, Wpisz czasy dla kolejnych rysunkow oddzielone spacją:
 Gui Add, Text, xm section, np."100 163 194 225":
-Gui Add, Edit, xm section W420 vinput_fig_names, 60 150 570 660 1320 1800
+Gui Add, Edit, xm section W420 vinput_fig_names
 Gui Add, Text, xm section, Opcjonalny suffix:
 Gui Add, Edit, xm section W420 vsuffix
 Gui Add, Button, x150 w80 section Default gdvButtonOK, OK
