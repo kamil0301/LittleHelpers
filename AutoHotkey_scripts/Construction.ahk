@@ -4,6 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance, Force ; Ensures a single instance of the script running at one time
 
+Menu, Tray, Icon, Icons/construction.png
 counter = 1 ;For the Counter
 
 
