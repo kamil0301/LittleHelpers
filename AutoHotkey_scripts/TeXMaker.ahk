@@ -245,6 +245,7 @@ węzłów ustroju}
 
 )
 PasteText(text_to_paste)
+Reload
 return
 
 
