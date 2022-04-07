@@ -28,6 +28,9 @@
 					"PackageIdentifier" : "qBittorrent.qBittorrent"
 				},
 				{
+					"PackageIdentifier" : "WinDirStat.WinDirStat"
+				},
+				{
 					"PackageIdentifier" : "FreeCAD.FreeCAD"
 				},
 				{
@@ -140,6 +143,9 @@
 				},
 				{
 					"PackageIdentifier" : "File-New-Project.EarTrumpet"
+				},
+				{
+					"PackageIdentifier" : "ShareX.ShareX"
 				},
 				{
 					"PackageIdentifier" : "VideoLAN.VLC"
