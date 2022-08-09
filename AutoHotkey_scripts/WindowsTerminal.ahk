@@ -11,11 +11,7 @@ Menu, Tray, Icon, Icons/wt_logo.png
 
 ; --------- Aktualne ---------
 
-::otto::'D:\Wszystko\Projekty_CR\OneDrive\CONSULTRISK\OTTO_Konin_Zaganski - Dokumenty\konstrukcja'
-::ottol::D:\Wszystko\Projekty_CR\21_007_OTTO_Konin_Zaganski
 
-::urania::'D:\Wszystko\Projekty_CR\OneDrive\CONSULTRISK\52_Hala_Urania - General\02_model\'
-::uranial::D:\Wszystko\Projekty_CR\21_006_52_Hala_Urania\
 
 ; --------- Inne skrypty ---------
 
@@ -47,9 +43,11 @@ Menu, Tray, Icon, Icons/wt_logo.png
 
 ::crl::D:\Wszystko\Projekty_CR\
 
+; --------- Aktywne w PowerToys Run ---------
 
 #IfWinActive, ahk_exe PowerToys.PowerLauncher.exe
 ::ahktex::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\TeXMaker.ahk
 ::ahkgid::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Construction.ahk
 ::ahkdia::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Diamond.ahk
 ::ahkswitch::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\SimpleAppSwitching.ahk
+::github::C:\Users\kamil\Documents\GitHub\
