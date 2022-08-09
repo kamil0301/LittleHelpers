@@ -37,6 +37,7 @@ return
 
 ;Reset the counter
 ^F1::
+counter = 1
 ToolTip, Counter: %counter%
 SetTimer, RemoveToolTip, -3000
 return
@@ -99,7 +100,20 @@ return
 ;********************* Active in GiD START *********************
 #IfWinActive, ahk_class TkTopLevel
 
+;Replace , with . (for numpad usage in GiD)
 :*?:,::.
+
+; Hold Shift + Left Mouse Click when holding Mouse wheel/middle mouse button
+; AKA CAD navigation (panning) in GiD
+; A bug: when gid window active, and panning in autocad, it f***s up your left mouse button? and then it needs a computer restart? 
+
+; MButton::
+; if (not GetKeyState("LShift", "P"))
+;     Send, {ShiftDown}{RButton Down}
+; return
+; MButton Up::
+; Send, {ShiftUp}{RButton Up}
+; return
 
 
 ;********************* Active in GiD END *********************
