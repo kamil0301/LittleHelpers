@@ -23,6 +23,7 @@ F18::back()
 
 switch_to_firefox()
 switch_to_diamond()
+switch_to_freecad()
 
 ;********************* Current window management START *********************
 
@@ -48,32 +49,32 @@ switch_to_diamond()
 
 ; Go back
 back(){
-;; if WinActive("ahk_class MozillaWindowClass")
-;tooltip, baaaack
-if WinActive("ahk_exe firefox.exe")
-	Send ^+{tab}
-if WinActive("ahk_exe OneCommander.exe")
-    Send, ^+{Tab}
-if WinActive("ahk_class classFoxitReader")
-    Send, ^+{Tab}
-if WinActive("ahk_class Chrome_WidgetWin_1")
-	Send ^+{tab}
-if WinActive("ahk_class Notepad++")
-	Send ^{PgUp}
-if WinActive("ahk_exe explorer.exe")
-	Send !{left} ;alt left is the explorer shortcut to go "back" or "down" one folder level.
+    ;; if WinActive("ahk_class MozillaWindowClass")
+    ;tooltip, baaaack
+    if WinActive("ahk_exe firefox.exe")
+        Send ^+{tab}
+    if WinActive("ahk_exe OneCommander.exe")
+        Send, ^+{Tab}
+    if WinActive("ahk_class classFoxitReader")
+        Send, ^+{Tab}
+    if WinActive("ahk_class Chrome_WidgetWin_1")
+        Send ^+{tab}
+    if WinActive("ahk_class Notepad++")
+        Send ^{PgUp}
+    if WinActive("ahk_exe explorer.exe")
+        Send !{left} ;alt left is the explorer shortcut to go "back" or "down" one folder level.
 }
 
 ; Firefox 
 ; ahk_class MozillaWindowClass 
 ; ahk_exe firefox.exe
 switch_to_firefox(){
-IfWinNotExist, ahk_class MozillaWindowClass
-    Run, C:\Program Files\Mozilla Firefox\firefox.exe
-if WinActive("ahk_class MozillaWindowClass")
-    Send, ^{Tab}
-else
-    WinActivate ahk_class MozillaWindowClass
+    IfWinNotExist, ahk_class MozillaWindowClass
+        Run, C:\Program Files\Mozilla Firefox\firefox.exe
+    if WinActive("ahk_class MozillaWindowClass")
+        Send, ^{Tab}
+    else
+        WinActivate ahk_class MozillaWindowClass
 }
 
 
@@ -81,30 +82,30 @@ else
 ; ahk_class TkTopLevel 
 ; ahk_exe gid.exe
 switch_to_gid(){
-IfWinNotExist, ahk_class TkTopLevel
-    Run, C:\Program Files\GiD\GiD 15.0.2\gid.exe
-WinActivate ahk_class TkTopLevel
+    IfWinNotExist, ahk_class TkTopLevel
+        Run, C:\Program Files\GiD\GiD 15.0.2\gid.exe
+    WinActivate ahk_class TkTopLevel
 }
 
 ; Diamond 
 ; ahk_class HwndWrapper[DefaultDomain;;ffa5699b-fdee-485a-bb85-7ee53438c266] 
 ; ahk_exe Diamond.exe
 switch_to_diamond(){
-IfWinNotExist, ahk_exe Diamond.exe
-    Run, C:\Users\kamil\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Diamond\Diamond 2016.appref-ms
-WinActivate ahk_exe Diamond.exe
+    IfWinNotExist, ahk_exe Diamond.exe
+        Run, C:\Users\kamil\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Diamond\Diamond 2016.appref-ms
+    WinActivate ahk_exe Diamond.exe
 }
 
 ; Notepad++ 
 ; ahk_class Notepad++ 
 ; ahk_exe notepad++.exe
 switch_to_notepadplusplus(){
-IfWinNotExist, ahk_class Notepad++
-    Run, C:\Program Files\Notepad++\notepad++.exe
-if WinActive("ahk_class Notepad++")
-    Send, ^{PgDn}
-else
-    WinActivate ahk_class Notepad++
+    IfWinNotExist, ahk_class Notepad++
+        Run, C:\Program Files\Notepad++\notepad++.exe
+    if WinActive("ahk_class Notepad++")
+        Send, ^{PgDn}
+    else
+        WinActivate ahk_class Notepad++
 }
 
 ; LibreOffice Calc
@@ -112,12 +113,12 @@ else
 ; ahk_class SALFRAME
 ; ahk_exe soffice.bin
 switch_to_libreoffice(){
-IfWinNotExist, ahk_class SALFRAME
-    Run, "C:\Program Files\LibreOffice\program\scalc.exe"
-GroupAdd, libreoffice_window_group, ahk_class SALFRAME
-if WinActive("ahk_class ahk_class SALFRAME")
-    GroupActivate, libreoffice_window_group, r
-WinActivate ahk_class SALFRAME
+    IfWinNotExist, ahk_class SALFRAME
+        Run, "C:\Program Files\LibreOffice\program\scalc.exe"
+    GroupAdd, libreoffice_window_group, ahk_class SALFRAME
+    if WinActive("ahk_class ahk_class SALFRAME")
+        GroupActivate, libreoffice_window_group, r
+    WinActivate ahk_class SALFRAME
 }
 
 
@@ -125,23 +126,34 @@ WinActivate ahk_class SALFRAME
 ; ahk_class classFoxitReader
 ; ahk_exe FoxitPDFReader.exe
 swtich_to_foxit(){
-IfWinNotExist, ahk_class classFoxitReader
-    Run, "C:\Program Files (x86)\Foxit Software\Foxit PDF Reader\FoxitPDFReader.exe"
-if WinActive("ahk_class classFoxitReader")
-    Send, ^{Tab}
-else
-    WinActivate ahk_class classFoxitReader
+    IfWinNotExist, ahk_class classFoxitReader
+        Run, "C:\Program Files (x86)\Foxit Software\Foxit PDF Reader\FoxitPDFReader.exe"
+    if WinActive("ahk_class classFoxitReader")
+        Send, ^{Tab}
+    else
+        WinActivate ahk_class classFoxitReader
 }
 
 ; OneCommader
 ; ahk_class HwndWrapper[OneCommander.exe;;bcd2d438-5355-4498-9ef2-8ca9bf8624e6]
 ; ahk_exe OneCommander.exe
 switch_to_onecommander(){
-IfWinNotExist, ahk_exe OneCommander.exe
-    Run, C:\Program Files\WindowsApps\44576milosp.OneCommander_3.4.17.0_neutral__p0rg76fmnrgsm\Rapidrive\OneCommander.exe
-if WinActive("ahk_exe OneCommander.exe")
-    Send, ^{Tab}
-WinActivate ahk_exe OneCommander.exe
+    IfWinNotExist, ahk_exe OneCommander.exe
+        Run, C:\Program Files\WindowsApps\44576milosp.OneCommander_3.4.17.0_neutral__p0rg76fmnrgsm\Rapidrive\OneCommander.exe
+    if WinActive("ahk_exe OneCommander.exe")
+        Send, ^{Tab}
+    WinActivate ahk_exe OneCommander.exe
+}
+
+; FreeCAD
+; ahk_class Qt5152QWindowIcon
+; ahk_exe FreeCAD.exe
+switch_to_freecad(){
+    IfWinNotExist, ahk_exe FreeCAD.exe
+        Run, "C:\Program Files\FreeCAD 0.19\bin\FreeCAD.exe"
+    if WinActive("ahk_exe FreeCAD.exe")
+        Send, ^{Tab}
+    WinActivate ahk_exe FreeCAD.exe
 }
 
 ; 8
