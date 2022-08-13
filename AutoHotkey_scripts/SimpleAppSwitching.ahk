@@ -20,6 +20,7 @@ F15::swtich_to_foxit()
 F16::switch_to_libreoffice()
 F17::switch_to_notepadplusplus()
 F18::back()
+F19::switch_to_dwgtrueview()
 
 switch_to_firefox()
 switch_to_diamond()
@@ -155,6 +156,18 @@ switch_to_freecad(){
         Send, ^{Tab}
     WinActivate ahk_exe FreeCAD.exe
 }
+
+; DWG TrueView
+; ahk_class AfxMDIFrame140u
+; ahk_exe dwgviewr.exe
+switch_to_dwgtrueview(){
+    IfWinNotExist, ahk_exe dwgviewr.exe
+        Run, "C:\Program Files\Autodesk\DWG TrueView 2022 - English\dwgviewr.exe"
+    if WinActive("ahk_exe dwgviewr.exe")
+        Send, ^{Tab}
+    WinActivate ahk_exe dwgviewr.exe
+}
+
 
 ; 8
 ; Explorer
