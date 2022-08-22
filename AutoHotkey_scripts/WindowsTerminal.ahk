@@ -27,6 +27,7 @@ Menu, Tray, Icon, Icons/wt_logo.png
 ::fireeng::C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\
 ::mcsteel::C:\Users\kamil\Documents\GitHub\mcsteel\
 ::iso2nf::python C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\iso2nf.py -s C:\SAFIR\safir.exe -c .\config\ -r 
+::repair::python C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\safir_tools.py repair_relax 
 
 ; --------- Programy ---------
 
