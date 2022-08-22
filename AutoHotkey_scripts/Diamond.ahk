@@ -243,7 +243,7 @@ if (generation_type = "Narzedzie Wycinanie"){
         Send, %output_dir%\disp%type% ; paste path and filename with extention
         Send, % fig_names[A_Index]
         Send, %suffix%.png{Enter}
-        Sleep, 1100
+        Sleep, 2200
         If (WinActive("Potwierdzanie zapisywania jako")){ ; replace the figure if already exists
             Send, t
         }
