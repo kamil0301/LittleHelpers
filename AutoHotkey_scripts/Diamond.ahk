@@ -13,7 +13,6 @@ SetKeyDelay, 50, 50
 
 F7::Reload
 
-
 ; Add nodes or edges to the chart
 ::points::
 nodes := StrSplit(Clipboard, A_Space)
@@ -22,6 +21,15 @@ Loop % nodes.MaxIndex(){
     Send, {Tab}{Enter}{ShiftDown}{Tab}{ShiftUp}
 }
 Send, {ShiftDown}{Tab 4}{ShiftUp}{Enter}
+return
+
+; Add nodes or edges to the chart but without enter
+::nodes::
+nodes := StrSplit(Clipboard, A_Space)
+Loop % nodes.MaxIndex(){
+    Send, % nodes[A_Index]
+    Send, {Tab}{Enter}{ShiftDown}{Tab}{ShiftUp}
+}
 return
 
 ; Generate displacement charts [from plotted add to selection]
@@ -110,6 +118,7 @@ generate_charts(chart_names, chart_type)
     WinWaitActive, Zapisywanie jako
     Sleep, 500
     Send, % chart_names[1]
+    Send, .jpg
     Sleep, 500
     ; Zapytaj czy wybrano prawidłowy folder
     WinWaitActive, %diamond_window_title%
@@ -154,7 +163,7 @@ generate_charts(chart_names, chart_type)
         WinWaitActive, Zapisywanie jako
         Sleep, 500
         Send, % chart_names[A_Index+1]
-        Send, {Enter}
+        Send, .jpg{Enter}
         Sleep, 500
         If WinActive("Zapisywanie jako", "już istnieje")
             Send, t
@@ -242,7 +251,7 @@ if (generation_type = "Narzedzie Wycinanie"){
         Send, {CtrlDown}S{CtrlUp}
         Send, %output_dir%\disp%type% ; paste path and filename with extention
         Send, % fig_names[A_Index]
-        Send, %suffix%.png{Enter}
+        Send, %suffix%.jpg{Enter}
         Sleep, 2200
         If (WinActive("Potwierdzanie zapisywania jako")){ ; replace the figure if already exists
             Send, t
@@ -266,7 +275,7 @@ else if (generation_type = "Zapis w Diamond"){
         Sleep, 500
         Send, %output_dir%\disp%type% ; paste path and filename with extention
         Send, % fig_names[A_Index]
-        Send, %suffix%.png{Enter}
+        Send, %suffix%.jpg{Enter}
         Sleep, 700
         If WinActive("Enregistrer sous", "już istnieje") ; replace the figure if already exists
             Send, t

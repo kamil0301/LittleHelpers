@@ -15,19 +15,28 @@ Menu, Tray, Icon, Icons/wt_logo.png
 
 ; --------- Inne skrypty ---------
 
-::ahktex::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\TeXMaker.ahk
-::ahkgid::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Construction.ahk
-::ahkdia::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Diamond.ahk
-::ahkswitch::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\SimpleAppSwitching.ahk
+::ahktex::D:\GitHub\LittleHelpers\AutoHotkey_scripts\TeXMaker.ahk
+::ahkgid::D:\GitHub\LittleHelpers\AutoHotkey_scripts\Construction.ahk
+::ahkdia::D:\GitHub\LittleHelpers\AutoHotkey_scripts\Diamond.ahk
+::ahkswitch::D:\GitHub\LittleHelpers\AutoHotkey_scripts\SimpleAppSwitching.ahk
 
 ; --------- GitHub Folder ---------
 
+<<<<<<< Updated upstream
 ::github::C:\Users\kamil\Documents\GitHub\
 ::ahks::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\
 ::fireeng::C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\
 ::mcsteel::C:\Users\kamil\Documents\GitHub\mcsteel\
 ::iso2nf::python C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\iso2nf.py -s C:\SAFIR\safir.exe -c .\config\ -r 
 ::repair::python C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\safir_tools.py repair_relax 
+=======
+::github::D:\GitHub\
+::ahks::D:\GitHub\LittleHelpers\AutoHotkey_scripts\
+::fireeng::D:\GitHub\fireeng-tools\structures\
+::mcsteel::D:\GitHub\mcsteel\
+::iso2nf::python D:\GitHub\fireeng-tools\structures\iso2nf.py -s C:\SAFIR\safir.exe -c .\config\ -r 
+::repairrelax::python D:\GitHub\fireeng-tools\structures\safir_tools.py repair_relax 
+>>>>>>> Stashed changes
 
 ; --------- Programy ---------
 
@@ -40,15 +49,16 @@ Menu, Tray, Icon, Icons/wt_logo.png
 
 ; --------- DYSK D ---------
 
-::cr::D:\Wszystko\Projekty_CR\OneDrive\CONSULTRISK\
+::cr::D:\CONSULTRISK\
 
-::crl::D:\Wszystko\Projekty_CR\
+::crl::D:\CR\1_Projekty\
 
 ; --------- Aktywne w PowerToys Run ---------
 
 #IfWinActive, ahk_exe PowerToys.PowerLauncher.exe
-::ahktex::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\TeXMaker.ahk
-::ahkgid::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Construction.ahk
-::ahkdia::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\Diamond.ahk
-::ahkswitch::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\SimpleAppSwitching.ahk
-::github::C:\Users\kamil\Documents\GitHub\
+::ahktex::D:\GitHub\LittleHelpers\AutoHotkey_scripts\TeXMaker.ahk
+::ahkgid::D:\GitHub\LittleHelpers\AutoHotkey_scripts\Construction.ahk
+::ahkdia::D:\GitHub\LittleHelpers\AutoHotkey_scripts\Diamond.ahk
+::ahkswitch::D:\GitHub\LittleHelpers\AutoHotkey_scripts\SimpleAppSwitching.ahk
+::github::D:\GitHub\
+::vial::D:\Wszystko\Klawiatura\Vial\Vial.exe

@@ -62,6 +62,8 @@ back(){
         Send ^+{tab}
     if WinActive("ahk_class Notepad++")
         Send ^{PgUp}
+    if WinActive("ahk_exe dwgviewr.exe")
+        Send, ^+{Tab}
     if WinActive("ahk_exe explorer.exe")
         Send !{left} ;alt left is the explorer shortcut to go "back" or "down" one folder level.
 }
@@ -84,7 +86,7 @@ switch_to_firefox(){
 ; ahk_exe gid.exe
 switch_to_gid(){
     IfWinNotExist, ahk_class TkTopLevel
-        Run, C:\Program Files\GiD\GiD 15.0.2\gid.exe
+        Run, C:\Program Files\GiD\GiD 15.0.3\gid.exe
     WinActivate ahk_class TkTopLevel
 }
 
@@ -140,7 +142,7 @@ swtich_to_foxit(){
 ; ahk_exe OneCommander.exe
 switch_to_onecommander(){
     IfWinNotExist, ahk_exe OneCommander.exe
-        Run, C:\Program Files\WindowsApps\44576milosp.OneCommander_3.4.17.0_neutral__p0rg76fmnrgsm\Rapidrive\OneCommander.exe
+        Run, D:\Programy\OneCommander\OneCommander.exe
     if WinActive("ahk_exe OneCommander.exe")
         Send, ^{Tab}
     WinActivate ahk_exe OneCommander.exe
@@ -162,7 +164,7 @@ switch_to_freecad(){
 ; ahk_exe dwgviewr.exe
 switch_to_dwgtrueview(){
     IfWinNotExist, ahk_exe dwgviewr.exe
-        Run, "C:\Program Files\Autodesk\DWG TrueView 2022 - English\dwgviewr.exe"
+        Run, "C:\Program Files\Autodesk\DWG TrueView 2023 - English\dwgviewr.exe"
     if WinActive("ahk_exe dwgviewr.exe")
         Send, ^{Tab}
     WinActivate ahk_exe dwgviewr.exe

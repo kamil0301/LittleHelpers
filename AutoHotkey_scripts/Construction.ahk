@@ -13,18 +13,28 @@ counter = 1 ;For the Counter
 ;All of them are defined in Logitech Gaming Software currently
 
 ;Copy all
-^F13::
-Send, {Ctrl Down}ac{Ctrl Up}
-return
+;-----------------------------------Hotkey to assign
+; Send, {Ctrl Down}ac{Ctrl Up}
+; return
 
 ;Replace 
-^F14::
-Send, {Ctrl Down}av{Ctrl Up}
-return
+;-----------------------------------Hotkey to assign
+; Send, {Ctrl Down}av{Ctrl Up}
+; return
 
 ;Select all
+;-----------------------------------Hotkey to assign
+; Send, {Ctrl Down}a{Ctrl Up}
+; return
+
+;Cut
+F24::
+Send, {Ctrl Down}x{Ctrl Up}
+return
+
+;Copy filename
 ^F15::
-Send, {Ctrl Down}a{Ctrl Up}
+Send, {F2}{Ctrl Down}c{Ctrl Up}{Escape}
 return
 
 ;Copy filename with extention
@@ -36,30 +46,30 @@ return
 ;********************* Counter START *********************
 
 ;Reset the counter
-^F1::
+^F17::
 counter = 1
 ToolTip, Counter: %counter%
 SetTimer, RemoveToolTip, -3000
 return
 
 ;Change the current value of the counter
-^F2::
+^F18::
 InputBox, counter, Counter, Input the value starting value of the counter 
 return
 
 ;Display the counter value
-^F3::
+^F19::
 ToolTip, Counter: %counter%
 SetTimer, RemoveToolTip, -3000
 return
 
 ;Paste the counter value
-^F4::
+^F20::
 Send, %counter%
 return
 
 ;Paste and increment the counter value
-^F5::
+^F21::
 Send, %counter%
 counter += 1
 return
@@ -72,21 +82,21 @@ return
 ; return
 
 ;Replace with clipboard and the counter value, then increment counter
-^F6::
+^F22::
 Send, {Ctrl Down}av{Ctrl Up}
 Send, %counter%
 counter += 1
 return
 
 ;Increment and display the counter value
-^F7::
+^F23::
 counter += 1
 ToolTip, Counter: %counter%
 SetTimer, RemoveToolTip, -3000
 return
 
 ;Decrement and display the counter value
-^F8::
+^F24::
 counter -= 1
 ToolTip, Counter: %counter%
 SetTimer, RemoveToolTip, -3000
