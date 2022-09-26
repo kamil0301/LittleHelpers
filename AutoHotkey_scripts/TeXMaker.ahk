@@ -22,6 +22,7 @@ Menu, Tray, Icon, Icons/tex-symbol-blue.png
 ; Nazwy rysunków w formacie dla jednego zestawu to na przykład:
 ; "dispS100", "dispF100", "dispT100" 
 ; S - side, F - front, T - top, 100 - czas (sekundy)
+; Po nazwie rysunku dodawany jest suffix, więc pełną nazwą może być np. "dispS100_x5"
 
 ::allcharts::
 Gui, Font, s10
@@ -40,6 +41,8 @@ Gui Add, Text, xm section, 3 zestaw rysunkow
 Gui Add, Edit, ys x200 W200 vczas_3
 Gui Add, Text, xm section, 4 zestaw rysunkow
 Gui Add, Edit, ys x200 W200 vczas_4
+Gui Add, Text, xm section, Suffix nazw plikow
+Gui Add, Edit, ys x200 W200 vsuffix_plikow
 Gui Add, Button, x200 w80 section Default, OK
 Gui Add, Button, ys w80 gExit, Cancel
 Gui, Show,, Dane do wykresow
@@ -54,11 +57,15 @@ ButtonOK:
 Gui Submit
 text_to_paste = 
 (
+\newpage
+\clearpage
+\subsubsection{Scenariusz %nr_scenariusza%}
+
 \begin{figure}[h!]
 \begin{center}
-\subfloat{\includegraphics[width=0.6\textwidth]{scenariusz%nr_scenariusza%/legenda_1}}
+\subfloat{\includegraphics[width=0.6\textwidth]{%folder_name%/legenda_1}}
 \quad
-\subfloat{\includegraphics[width=0.8\textwidth]{scenariusz%nr_scenariusza%/legenda_2}}
+\subfloat{\includegraphics[width=0.8\textwidth]{%folder_name%/legenda_2}}
 \end{center}
 \caption{Scenariusz %nr_scenariusza%. Model analizowanego ustroju z zaznaczonymi
 elementami i~węzłami wyróżnionymi na wykresach}
@@ -202,9 +209,9 @@ węzłów ustroju}
 \clearpage
 \begin{figure}[htp!]
 \begin{center}
-\subfloat[Widok w poprzek regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispS%czas_1%}}\quad
-\subfloat[Widok wzdłuż regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispF%czas_1%}}\quad
-\subfloat[Widok z góry]{\includegraphics[height=.28\textheight]{%folder_name%/dispT%czas_1%}}\quad
+\subfloat[Widok w poprzek regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispS%czas_1%%suffix_plikow%}}\quad
+\subfloat[Widok wzdłuż regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispF%czas_1%%suffix_plikow%}}\quad
+\subfloat[Widok z góry]{\includegraphics[height=.28\textheight]{%folder_name%/dispT%czas_1%%suffix_plikow%}}\quad
 \end{center}
 \caption{Scenariusz %nr_scenariusza%. Przemieszczenia konstrukcji (skala $\times$ %skala_rys%) (%czas_1%~s)}
 \label{rys:mes%nr_scenariusza%-15}
@@ -213,9 +220,9 @@ węzłów ustroju}
 \clearpage
 \begin{figure}[htp!]
 \begin{center}
-\subfloat[Widok w poprzek regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispS%czas_2%}}\quad
-\subfloat[Widok wzdłuż regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispF%czas_2%}}\quad
-\subfloat[Widok z góry]{\includegraphics[height=.28\textheight]{%folder_name%/dispT%czas_2%}}\quad
+\subfloat[Widok w poprzek regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispS%czas_2%%suffix_plikow%}}\quad
+\subfloat[Widok wzdłuż regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispF%czas_2%%suffix_plikow%}}\quad
+\subfloat[Widok z góry]{\includegraphics[height=.28\textheight]{%folder_name%/dispT%czas_2%%suffix_plikow%}}\quad
 \end{center}
 \caption{Scenariusz %nr_scenariusza%. Przemieszczenia konstrukcji (skala $\times$ %skala_rys%) (%czas_2%~s)}
 \label{rys:mes%nr_scenariusza%-16}
@@ -224,9 +231,9 @@ węzłów ustroju}
 \clearpage
 \begin{figure}[htp!]
 \begin{center}
-\subfloat[Widok w poprzek regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispS%czas_3%}}\quad
-\subfloat[Widok wzdłuż regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispF%czas_3%}}\quad
-\subfloat[Widok z góry]{\includegraphics[height=.28\textheight]{%folder_name%/dispT%czas_3%}}\quad
+\subfloat[Widok w poprzek regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispS%czas_3%%suffix_plikow%}}\quad
+\subfloat[Widok wzdłuż regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispF%czas_3%%suffix_plikow%}}\quad
+\subfloat[Widok z góry]{\includegraphics[height=.28\textheight]{%folder_name%/dispT%czas_3%%suffix_plikow%}}\quad
 \end{center}
 \caption{Scenariusz %nr_scenariusza%. Przemieszczenia konstrukcji (skala $\times$ %skala_rys%) (%czas_3%~s)}
 \label{rys:mes%nr_scenariusza%-17}
@@ -235,9 +242,9 @@ węzłów ustroju}
 \clearpage
 \begin{figure}[htp!]
 \begin{center}
-\subfloat[Widok w poprzek regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispS%czas_4%}}\quad
-\subfloat[Widok wzdłuż regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispF%czas_4%}}\quad
-\subfloat[Widok z góry]{\includegraphics[height=.28\textheight]{%folder_name%/dispT%czas_4%}}\quad
+\subfloat[Widok w poprzek regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispS%czas_4%%suffix_plikow%}}\quad
+\subfloat[Widok wzdłuż regałów]{\includegraphics[height=.28\textheight]{%folder_name%/dispF%czas_4%%suffix_plikow%}}\quad
+\subfloat[Widok z góry]{\includegraphics[height=.28\textheight]{%folder_name%/dispT%czas_4%%suffix_plikow%}}\quad
 \end{center}
 \caption{Scenariusz %nr_scenariusza%. Przemieszczenia konstrukcji (skala $\times$ %skala_rys%) (%czas_4%~s)}
 \label{rys:mes%nr_scenariusza%-18}
