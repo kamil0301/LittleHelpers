@@ -22,21 +22,12 @@ Menu, Tray, Icon, Icons/wt_logo.png
 
 ; --------- GitHub Folder ---------
 
-<<<<<<< Updated upstream
-::github::C:\Users\kamil\Documents\GitHub\
-::ahks::C:\Users\kamil\Documents\GitHub\LittleHelpers\AutoHotkey_scripts\
-::fireeng::C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\
-::mcsteel::C:\Users\kamil\Documents\GitHub\mcsteel\
-::iso2nf::python C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\iso2nf.py -s C:\SAFIR\safir.exe -c .\config\ -r 
-::repair::python C:\Users\kamil\Documents\GitHub\fireeng-tools\structures\safir_tools.py repair_relax 
-=======
 ::github::D:\GitHub\
 ::ahks::D:\GitHub\LittleHelpers\AutoHotkey_scripts\
 ::fireeng::D:\GitHub\fireeng-tools\structures\
 ::mcsteel::D:\GitHub\mcsteel\
 ::iso2nf::python D:\GitHub\fireeng-tools\structures\iso2nf.py -s C:\SAFIR\safir.exe -c .\config\ -r 
 ::repairrelax::python D:\GitHub\fireeng-tools\structures\safir_tools.py repair_relax 
->>>>>>> Stashed changes
 
 ; --------- Programy ---------
 
