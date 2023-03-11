@@ -79,9 +79,6 @@
 					"PackageIdentifier" : "vim.vim"
 				},
 				{
-					"PackageIdentifier" : "CondaForge.Mambaforge"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.WindowsTerminal"
 				},
 				{
