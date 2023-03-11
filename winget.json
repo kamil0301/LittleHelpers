@@ -13,23 +13,26 @@
 					"PackageIdentifier" : "CodeSector.TeraCopy"
 				},
 				{
-					"PackageIdentifier" : "QNAP.Qsync"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.OneDrive"
-				},
-				{
-					"PackageIdentifier" : "Google.Drive"
-				},
-				{
-					"PackageIdentifier" : "Google.BackupAndSync"
-				},
-				{
 					"PackageIdentifier" : "qBittorrent.qBittorrent"
 				},
 				{
 					"PackageIdentifier" : "WinDirStat.WinDirStat"
 				},
+				
+				
+				
+				{
+					"PackageIdentifier" : "Foxit.FoxitReader"
+				},
+				{
+					"PackageIdentifier" : "TheDocumentFoundation.LibreOffice"
+				},
+				{
+					"PackageIdentifier" : "Obsidian.Obsidian"
+				},
+				
+				
+				
 				{
 					"PackageIdentifier" : "FreeCAD.FreeCAD"
 				},
@@ -39,9 +42,9 @@
 				{
 					"PackageIdentifier" : "Inkscape.Inkscape"
 				},
-				{
-					"PackageIdentifier" : "9WZDNCRF0083"
-				},
+				
+				
+				
 				{
 					"PackageIdentifier" : "WhatsApp.WhatsApp"
 				},
@@ -54,6 +57,9 @@
 				{
 					"PackageIdentifier" : "TeamSpeakSystems.TeamSpeakClient"
 				},
+				
+				
+				
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode"
 				},
@@ -67,44 +73,47 @@
 					"PackageIdentifier" : "GitHub.GitHubDesktop"
 				},
 				{
-					"PackageIdentifier" : "Logitech.LGS"
+					"PackageIdentifier" : "Git.Git"
 				},
 				{
-					"PackageIdentifier" : "9P9TQF7MRM4R"
+					"PackageIdentifier" : "vim.vim"
 				},
 				{
-					"PackageIdentifier" : "Canonical.Ubuntu"
+					"PackageIdentifier" : "CondaForge.Mambaforge"
 				},
 				{
-					"PackageIdentifier" : "Adobe.Acrobat.Reader.64-bit"
+					"PackageIdentifier" : "Microsoft.WindowsTerminal"
 				},
 				{
-					"PackageIdentifier" : "Foxit.FoxitReader"
+					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
 				},
-				{
-					"PackageIdentifier" : "TheDocumentFoundation.LibreOffice"
-				},
-				{
-					"PackageIdentifier" : "ChristianSchenk.MiKTeX"
-				},
-				{
-					"PackageIdentifier" : "Texmaker.Texmaker"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.Office"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.Teams"
-				},
+				
+				
+				
 				{
 					"PackageIdentifier" : "Google.Chrome"
 				},
 				{
 					"PackageIdentifier" : "Mozilla.Firefox"
 				},
+				
+				
+				
 				{
-					"PackageIdentifier" : "Microsoft.Edge"
+					"PackageIdentifier" : "VideoLAN.VLC"
 				},
+				{
+					"PackageIdentifier" : "Audacity.Audacity"
+				},
+				{
+					"PackageIdentifier" : "Spotify.Spotify"
+				},
+				{
+					"PackageIdentifier" : "DuongDieuPhap.ImageGlass"
+				},
+				
+				
+				
 				{
 					"PackageIdentifier" : "Microsoft.PowerToys"
 				},
@@ -121,24 +130,6 @@
 					"PackageIdentifier" : "ModernFlyouts.ModernFlyouts"
 				},
 				{
-					"PackageIdentifier" : "Bitwarden.Bitwarden"
-				},
-				{
-					"PackageIdentifier" : "Yubico.YubikeyManager"
-				},
-				{
-					"PackageIdentifier" : "Yubico.Authenticator"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.WindowsTerminal"
-				},
-				{
-					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
-				},
-				{
-					"PackageIdentifier" : "Git.Git"
-				},
-				{
 					"PackageIdentifier" : "code52.Carnac"
 				},
 				{
@@ -148,14 +139,23 @@
 					"PackageIdentifier" : "ShareX.ShareX"
 				},
 				{
-					"PackageIdentifier" : "VideoLAN.VLC"
+					"PackageIdentifier" : "voidtools.Everything"
+				},
+				
+				
+				
+				{
+					"PackageIdentifier" : "Bitwarden.Bitwarden"
 				},
 				{
-					"PackageIdentifier" : "Audacity.Audacity"
+					"PackageIdentifier" : "Yubico.YubikeyManager"
 				},
 				{
-					"PackageIdentifier" : "Spotify.Spotify"
+					"PackageIdentifier" : "Yubico.Authenticator"
 				},
+				
+				
+				
 				{
 					"PackageIdentifier" : "Valve.Steam"
 				},
@@ -168,6 +168,9 @@
 				{
 					"PackageIdentifier" : "ElectronicArts.EADesktop"
 				},
+				
+				
+				
 				{
 					"PackageIdentifier" : "Appest.TickTick"
 				},
