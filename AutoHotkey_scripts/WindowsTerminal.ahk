@@ -7,6 +7,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Use Window Spy (indcluded with ahk) to get WinTitle, ahk_exe, ahk_class and other
 
 Menu, Tray, Icon, Icons/wt_logo.png
+
+; Uruchom PowerToys Run i wpisz "<" - zmiana aktywnych okien
+^!+g::
+Send {ControlDown}{ShiftDown}{AltDown}f{ControlUp}{ShiftUp}{AltUp}<
+return
+
 #IfWinActive, ahk_exe WindowsTerminal.exe
 
 ; --------- Aktualne ---------
