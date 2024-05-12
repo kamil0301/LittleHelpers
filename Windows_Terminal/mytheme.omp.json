@@ -51,11 +51,10 @@
           "foreground": "#111111",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "display_mode": "files",
-            "fetch_virtual_env": false
+            "home_enabled": true
           },
           "style": "powerline",
-          "template": " \ue235 {{ .Full }} ",
+          "template": " \ue235 {{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }} ",
           "type": "python"
         },
         {
@@ -81,7 +80,7 @@
           "foreground": "#fff",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
-          "template": "<#fff> \uf64f </>{{ .CurrentDate | date .Format }} ",
+          "template": "<#fff> \uf017 </>{{ .CurrentDate | date .Format }} ",
           "type": "time"
         },
         {
@@ -91,7 +90,7 @@
             "always_enabled": true
           },
           "style": "diamond",
-          "template": " \ufbab {{ .FormattedMs }}\u2800",
+          "template": " <#fefefe>\udb86\udd9f</> {{ .FormattedMs }}\u2800",
           "trailing_diamond": "\ue0b4",
           "type": "executiontime"
         }
